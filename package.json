@@ -1,0 +1,19 @@
+{
+  "name": "blockchain-cli",
+  "version": "2.0.0",
+  "description": "Blockchain command-line interface",
+  "main": "index.js",
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
+  "scripts": {
+    "start": "node ./index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "vorpal": "^1.12.0"
+  }
+}
