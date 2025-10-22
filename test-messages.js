@@ -21,12 +21,12 @@ try {
   console.log('  - 消息结构:', JSON.stringify(requestLatestBlockMsg));
   console.log('✓ 请求最新区块消息功能创建正常\n');
 
-  // 测试3: 发送最新区块消息功能
-  console.log('3. 测试发送最新区块消息功能:');
+  // 测试3: 响应最新区块消息功能
+  console.log('3. 测试响应最新区块消息功能:');
   const testBlock = Block.genesis;
   const sendLatestBlockMsg = Messages.sendLatestBlock(testBlock);
   console.log('  - 消息类型:', sendLatestBlockMsg.type);
-  console.log('  - 是否为接收最新区块类型:', sendLatestBlockMsg.type === messageType.RECEIVE_LATEST_BLOCK);
+  console.log('  - 是否为响应最新区块类型:', sendLatestBlockMsg.type === messageType.RECEIVE_LATEST_BLOCK);
   console.log('  - 包含的数据:', JSON.stringify(sendLatestBlockMsg.data));
   console.log('  - 数据是否为创世区块:', sendLatestBlockMsg.data.index === 0);
   console.log('  - 消息结构:', JSON.stringify(sendLatestBlockMsg));
@@ -40,12 +40,12 @@ try {
   console.log('  - 消息结构:', JSON.stringify(requestBlockchainMsg));
   console.log('✓ 请求整个区块链消息功能创建正常\n');
 
-  // 测试5: 发送整个区块链消息功能
-  console.log('5. 测试发送整个区块链消息功能:');
+  // 测试5: 响应整个区块链消息功能
+  console.log('5. 测试响应整个区块链消息功能:');
   const testChain = [Block.genesis];
   const sendBlockchainMsg = Messages.sendBlockchain(testChain);
   console.log('  - 消息类型:', sendBlockchainMsg.type);
-  console.log('  - 是否为接收整个区块链类型:', sendBlockchainMsg.type === messageType.RECEIVE_BLOCKCHAIN);
+  console.log('  - 是否为响应整个区块链类型:', sendBlockchainMsg.type === messageType.RECEIVE_BLOCKCHAIN);
   console.log('  - 包含的数据长度:', sendBlockchainMsg.data.length);
   console.log('  - 数据是否包含创世区块:', sendBlockchainMsg.data[0].index === 0);
   console.log('  - 消息结构:', JSON.stringify(sendBlockchainMsg));

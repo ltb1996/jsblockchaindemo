@@ -15,7 +15,7 @@ class Messages {
       type: REQUEST_LATEST_BLOCK
     };
   }
-  // 发送最新区块的消息
+  // 响应最新区块的消息（将最新区块发送给请求方）
   static sendLatestBlock(block) {
     return {
       type: RECEIVE_LATEST_BLOCK,
@@ -28,7 +28,7 @@ class Messages {
       type: REQUEST_BLOCKCHAIN
     };
   }
-  // 发送整个区块链的消息
+  // 响应区块链的消息（将整个区块链发送给请求方）
   static sendBlockchain(blockchain) {
     return {
       type: RECEIVE_BLOCKCHAIN,
